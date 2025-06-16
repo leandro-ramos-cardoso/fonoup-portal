@@ -5,7 +5,7 @@ import { FaInfoCircle, FaUserCircle, FaEnvelope, FaStethoscope } from 'react-ico
 const AppNavbar = () => {
     return (
         <div>
-            <Container fluid className="p-0">
+            <Container fluid className="p-0" style={{fontSize: "1.2rem"}}>
                 <Navbar variant="dark" bg="dark" expand="lg" className="p-4">
                     <Navbar.Brand href="#home">
                         FonoUP
