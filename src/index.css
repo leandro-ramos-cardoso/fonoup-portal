@@ -1,0 +1,14 @@
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('fundobg.jpg');
+    /* se a imagem estiver na pasta public/ */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* opcional: faz o fundo "parado" ao scrollar */
+}

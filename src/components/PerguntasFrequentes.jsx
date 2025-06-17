@@ -6,7 +6,7 @@ const PerguntasFrequentes = () => {
         <Container>
             <h2 className="mt-5 text-center">Perguntas Frequentes</h2>
 
-            <Accordion defaultActiveKey="0" className="mb-5">
+            <Accordion defaultActiveKey="1" className="mb-5">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Accordion Item #1</Accordion.Header>
                     <Accordion.Body>

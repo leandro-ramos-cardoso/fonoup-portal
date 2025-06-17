@@ -1,31 +1,63 @@
-import React from 'react'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const CardsEspaco = () => {
     return (
-        <Container>
-            <h2 className="mt-5 text-center">Conheça nosso espaço</h2>
-            <p className="mb-5 text-center">Venha nos visitar</p>
+        <Container className="py-5">
+            <h2 className="text-center mb-3">Conheça nosso espaço</h2>
+            <p className="text-center mb-5">Venha nos visitar</p>
 
-            <Row xs={1} md={2} className="g-5">
-                {Array.from({ length: 4 }).map((_, idx) => (
-                    <Col key={idx}>
-                        <Card>
-                            <Card.Img variant="top" src="https://placehold.co/500x300" />
-                            <Card.Body>
-                                <Card.Title>Card title</Card.Title>
-                                <Card.Text>
-                                    This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit
-                                    longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                ))}
+            <Row xs={1} md={2} className="g-4">
+                <Col>
+                    <Card>
+                        <Card.Img variant="top" src="https://placehold.co/500x300" />
+                        <Card.Body className="text-center">
+                            <Card.Title>Recepção acolhedora</Card.Title>
+                            <Card.Text>
+                                Ao chegar na Fono UP, você será recebido em um ambiente pensado para oferecer conforto, tranquilidade e bem-estar.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+
+                <Col>
+                    <Card>
+                        <Card.Img variant="top" src="https://placehold.co/500x300" />
+                        <Card.Body className="text-center">
+                            <Card.Title>Sala de Terapia</Card.Title>
+                            <Card.Text>
+                                Espaço lúdico e funcional pensado para intervenções com crianças de diferentes idades.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+
+                <Col>
+                    <Card>
+                        <Card.Img variant="top" src="https://placehold.co/500x300" />
+                        <Card.Body className="text-center">
+                            <Card.Title>Materiais Diversificados</Card.Title>
+                            <Card.Text>
+                                Jogos, livros e recursos visuais utilizados para potencializar o desenvolvimento da linguagem.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+
+                <Col>
+                    <Card>
+                        <Card.Img variant="top" src="https://placehold.co/500x300" />
+                        <Card.Body className="text-center">
+                            <Card.Title>Área de Espera</Card.Title>
+                            <Card.Text>
+                                Um cantinho agradável para acompanhantes relaxarem enquanto aguardam os atendimentos.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
             </Row>
         </Container>
-    )
-}
+    );
+};
 
-export default CardsEspaco
+export default CardsEspaco;
