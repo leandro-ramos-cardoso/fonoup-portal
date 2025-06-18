@@ -4,11 +4,10 @@ a {
 }
 
 body {
-    background-image: url('fundobg.jpg');
-    /* se a imagem estiver na pasta public/ */
+    background-image: url('fundobg2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    /* opcional: faz o fundo "parado" ao scrollar */
 }
+

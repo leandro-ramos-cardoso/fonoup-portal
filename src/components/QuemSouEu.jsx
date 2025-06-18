@@ -7,7 +7,7 @@ const QuemSouEu = () => {
         // style={{ background: 'linear-gradient(to right, #fdfbfb, #ebedee)' }}
         >
             <Container>
-                <h2 className="text-center mb-5 fw-bold">Quem é Henery Lopes?</h2>
+                <h2 className="text-center mb-5 mt-5" style={{ fontSize: '2.5rem', color: '#555' }}>Quem é Henery Lopes?</h2>
                 <Card className="shadow-lg border-0 rounded-4 overflow-hidden">
                     <Row className="g-0 align-items-center">
                         <Col md={5} className="text-center p-4 bg-light">
@@ -15,7 +15,6 @@ const QuemSouEu = () => {
                                 src="/logo.png"
                                 alt="Henery Lopes"
                                 fluid
-                                roundedCircle
                                 style={{ maxHeight: '300px', objectFit: 'cover' }}
                             />
                         </Col>

@@ -4,9 +4,14 @@ import { Container, Accordion } from 'react-bootstrap'
 const PerguntasFrequentes = () => {
     return (
         <Container>
-            <h2 className="mt-5 text-center">Perguntas Frequentes</h2>
+            <h2 
+                className="text-center mb-5 mt-5"
+                style={{ fontSize: '2.5rem', color: '#555' }}
+            >
+                Perguntas Frequentes
+            </h2>
 
-            <Accordion defaultActiveKey="1" className="mb-5">
+            <Accordion defaultActiveKey="1" style={{marginBottom: '10rem'}}>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Accordion Item #1</Accordion.Header>
                     <Accordion.Body>

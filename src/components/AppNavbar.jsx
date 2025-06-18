@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Navbar, Container, Nav, Button } from 'react-bootstrap'
 import { FaInfoCircle, FaUserCircle, FaEnvelope, FaStethoscope } from 'react-icons/fa'
 
 const AppNavbar = () => {
@@ -39,6 +39,21 @@ const AppNavbar = () => {
                             <Nav.Link href="#home" className="d-flex align-items-center gap-2">
                                 <FaEnvelope />
                                 Contato
+                            </Nav.Link>
+                            <Nav.Link>
+                                <Button
+                                    style={{
+                                        backgroundColor: '#ed4fa5',
+                                        color: '#fff',
+                                        border: 'none',
+                                        padding: '0.75rem 1.5rem',
+                                        borderRadius: '8px',
+                                        fontWeight: '600',
+                                        fontSize: '1rem',
+                                        cursor: 'pointer',
+                                        transition: 'background 0.3s ease'
+                                    }}
+                                >Agende sua consulta</Button>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

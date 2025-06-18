@@ -4,8 +4,18 @@ import { Container } from 'react-bootstrap'
 const ConhecaFonoup = () => {
     return (
         <Container>
-            <h2 className="mt-5 text-center">Transformamos a sua comunicação, elevando sua voz a novos patamares!</h2>
-            <p className="mb-5 text-center">Conheça a FonoUP</p>
+            <h2 
+                className="text-center mb-3 mt-5"
+                style={{ fontSize: '2.5rem', color: '#555' }}
+            >
+                Ambiente acolhedor pensado para toda a família
+            </h2>
+            <p 
+                className="text-center mb-5"
+                style={{ fontSize: '1.50rem', color: '#777' }}
+            >
+                Conheça a FonoUP
+            </p>
 
             <video 
             src="/videos/video-exemplo.mp4" 

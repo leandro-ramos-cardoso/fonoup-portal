@@ -1,0 +1,26 @@
+/* 🔺 Cor das setas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ed4fa5;
+    /* rosa FonoUP */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 50% 50%;
+}
+
+/* 🔹 Indicadores (barrinhas ou bolinhas abaixo do carousel) */
+.carousel-indicators [data-bs-target] {
+    background-color: #ccc;
+    /* cor padrão */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.carousel-indicators .active {
+    background-color: #ed4fa5;
+    /* rosa quando ativo */
+    opacity: 1;
+}

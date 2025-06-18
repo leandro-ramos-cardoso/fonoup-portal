@@ -7,6 +7,7 @@ import QuemSouEu from './components/QuemSouEu.jsx'
 import Especialidades from './components/Especialidades.jsx'
 import PerguntasFrequentes from './components/PerguntasFrequentes.jsx'
 import Footer from './components/Footer.jsx'
+import Depoimentos from './components/Depoimentos.jsx'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <ConhecaFonoup />
       <QuemSouEu />
       <Especialidades />
+      {/* <Depoimentos /> */}
       <PerguntasFrequentes />
       <Footer />
     </div>
