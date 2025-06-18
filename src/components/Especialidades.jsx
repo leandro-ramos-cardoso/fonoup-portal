@@ -9,11 +9,7 @@ const Especialidades = () => {
             <Row className="g-4">
                 <Col xs={12} sm={6} md={4} lg={3}>
                     <Card className="h-100">
-                        <div 
-                        style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '1rem' }} className="mb-3">
-                            <FaPuzzlePiece size={80} color="#ed4fa5" />
-                        </div>
-
+                        <Card.Img variant="top" src="https://placehold.co/300x150" />
                         <Card.Body>
                             <Card.Title>TEA</Card.Title>
                             <Card.Text>

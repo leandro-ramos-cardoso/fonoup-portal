@@ -1,8 +1,14 @@
 import React from 'react'
 import { Navbar, Container, Nav, Button } from 'react-bootstrap'
 import { FaInfoCircle, FaUserCircle, FaEnvelope, FaStethoscope } from 'react-icons/fa'
+import ModalConsulta from './ModalConsulta'
+import { useState } from 'react'
 
 const AppNavbar = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleOpen = () => setShowModal(true);
+    const handleClose = () => setShowModal(false);
     return (
         <div>
             <Container fluid className="p-0" style={{ fontSize: "1.2rem" }}>
@@ -41,7 +47,7 @@ const AppNavbar = () => {
                                 Contato
                             </Nav.Link>
                             <Nav.Link>
-                                <Button
+                                <Button onClick={handleOpen}
                                     style={{
                                         backgroundColor: '#ed4fa5',
                                         color: '#fff',
@@ -62,6 +68,7 @@ const AppNavbar = () => {
                     <span style={{ color: 'gray' }}>oi</span>
                 </div>
             </Container>
+            <ModalConsulta show={showModal} handleClose={handleClose} />
         </div>
     )
 }
