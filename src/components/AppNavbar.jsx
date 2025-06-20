@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Container, Nav, Button } from 'react-bootstrap'
+import { Navbar, Container, Nav, Button, NavDropdown } from 'react-bootstrap'
 import { FaInfoCircle, FaUserCircle, FaEnvelope, FaStethoscope } from 'react-icons/fa'
 import ModalConsulta from './ModalConsulta'
 import { useState } from 'react'
@@ -14,7 +14,6 @@ const AppNavbar = () => {
             <Container fluid className="p-0" style={{ fontSize: "1.2rem" }}>
                 <Navbar variant="dark" bg="dark" expand="lg" className="p-4" fixed="top">
                     <Navbar.Brand href="#home">
-                        {/* FonoUP */}
                         <img
                             src="/logo.png"
                             style={{
@@ -30,13 +29,23 @@ const AppNavbar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="gap-3 ms-auto">
-                            <Nav.Link href="#home" className="d-flex align-items-center gap-2">
-                                <FaInfoCircle />
-                                Sobre
-                            </Nav.Link>
-                            <Nav.Link href="#home" className="d-flex align-items-center gap-2">
+                            <Nav.Link href="#home" className="d-flex align-items-center">
                                 <FaUserCircle />
-                                Login
+                                <NavDropdown title="Área do Paciente" id="area-paciente">
+                                <NavDropdown.Item 
+                                    className='mb-2'
+                                    href="#verificarAgendamentos"
+                                >
+                                    Verificar Agendamento
+                                </NavDropdown.Item>
+
+                                <NavDropdown.Item 
+                                    className='mb-2' href="#reagendarConsulta">Reagendar Consulta
+                                </NavDropdown.Item>
+
+                                <NavDropdown.Item className='mb-2' href="#progressoTratamento">Progresso do Tratamento</NavDropdown.Item>
+                                <NavDropdown.Item href="#baixarDocumentos">Baixar Documentos</NavDropdown.Item>
+                            </NavDropdown>
                             </Nav.Link>
                             <Nav.Link href="#home" className="d-flex align-items-center gap-2">
                                 <FaStethoscope />
@@ -61,12 +70,10 @@ const AppNavbar = () => {
                                     }}
                                 >Agende sua consulta</Button>
                             </Nav.Link>
+
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-                <div style={{ backgroundColor: 'gray', padding: '0.1px', textAlign: 'center' }}>
-                    <span style={{ color: 'gray' }}>oi</span>
-                </div>
             </Container>
             <ModalConsulta show={showModal} handleClose={handleClose} />
         </div>

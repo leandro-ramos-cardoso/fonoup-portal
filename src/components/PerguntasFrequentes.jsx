@@ -3,7 +3,7 @@ import { Container, Accordion } from 'react-bootstrap'
 
 const PerguntasFrequentes = () => {
     return (
-        <Container>
+        <Container id="faq">
             <h2 
                 className="text-center mb-5 mt-5"
                 style={{ fontSize: '2.5rem', color: '#555' }}
@@ -11,80 +11,44 @@ const PerguntasFrequentes = () => {
                 Perguntas Frequentes
             </h2>
 
-            <Accordion defaultActiveKey="1" style={{marginBottom: '10rem'}}>
+            <Accordion defaultActiveKey="1" style={{marginBottom: '10rem'}} className="faq-accordion">
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>Accordion Item #1</Accordion.Header>
+                    <Accordion.Header>Como agendar uma consulta na FonoUP?</Accordion.Header>
                     <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Você pode agendar diretamente pelo nosso site clicando em "Agende sua consulta", ou se preferir, entrar em contato pelo nosso WhatsApp. É simples, rápido e com retorno imediato da nossa equipe.
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
-                    <Accordion.Header>Accordion Item #2</Accordion.Header>
+                    <Accordion.Header>Quais são as especialidades atendidas na FonoUP?</Accordion.Header>
                     <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Atuamos nas áreas de linguagem oral, fala, motricidade orofacial, comunicação alternativa (CSA), neurodesenvolvimento infantil, além de orientação para famílias e apoio escolar.
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
-                    <Accordion.Header>Accordion Item #2</Accordion.Header>
+                    <Accordion.Header>A FonoUP atende crianças com autismo?</Accordion.Header>
                     <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Sim! Temos experiência no atendimento de crianças com TEA (Transtorno do Espectro Autista), com estratégias baseadas em ABA, comunicação alternativa e estimulação da linguagem e interação social.
                     </Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="4">
-                    <Accordion.Header>Accordion Item #2</Accordion.Header>
+                    <Accordion.Header>Qual a idade ideal para iniciar a fonoaudiologia?</Accordion.Header>
                     <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Quanto antes, melhor. A intervenção precoce, inclusive a partir de 1 ano de idade, pode fazer toda a diferença no desenvolvimento da comunicação. Não espere — sinais precoces merecem atenção imediata.
                     </Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="5">
-                    <Accordion.Header>Accordion Item #2</Accordion.Header>
+                    <Accordion.Header>Como posso acompanhar a evolução do tratamento?</Accordion.Header>
                     <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Cada paciente tem um plano terapêutico personalizado. As evoluções são discutidas periodicamente com a família e registradas em relatórios. Estamos sempre disponíveis para esclarecer dúvidas durante o processo.
                     </Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="6">
-                    <Accordion.Header>Accordion Item #2</Accordion.Header>
+                    <Accordion.Header>Quanto tempo dura cada sessão de fonoaudiologia?</Accordion.Header>
                     <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Cada sessão tem duração média de 45 a 50 minutos, podendo variar conforme a necessidade do paciente e o plano terapêutico definido. O mais importante é garantir um atendimento acolhedor, eficaz e respeitoso com o tempo da criança e da família.
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>

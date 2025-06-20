@@ -1,6 +1,5 @@
-a {
-    color: #007bff;
-    text-decoration: none;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,3 +10,39 @@ body {
     background-attachment: fixed;
 }
 
+.faq-accordion .accordion-button:not(.collapsed) {
+    background-color: #ed4fa5;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    box-shadow: none;
+    border: 2px solid #ed4fa5;
+}
+
+.faq-accordion .accordion-body {
+    border: 2px solid #ed4fa5;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.faq-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button.collapsed::after {
+    filter: brightness(0) saturate(100%) invert(41%) sepia(89%) saturate(751%) hue-rotate(294deg) brightness(103%) contrast(101%);
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    filter: brightness(1000%) saturate(0%) contrast(100%) !important;
+}
+
+
+.card-animado {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-animado:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

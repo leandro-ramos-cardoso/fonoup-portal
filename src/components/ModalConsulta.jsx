@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form, Row, Col, Toast, ToastContainer } from 'react-bootstrap';
+import { Modal, Button, Form, Row, Col, Toast, ToastContainer, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import axios from 'axios';
+import { FaQuestionCircle } from 'react-icons/fa'
 
 const ModalConsulta = ({ show, handleClose }) => {
     const urlDoBackend = "http://localhost:3000";
@@ -45,7 +46,20 @@ const ModalConsulta = ({ show, handleClose }) => {
         <>
             <Modal show={show} onHide={handleClose} centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>Agende sua consulta</Modal.Title>
+                    <Modal.Title>
+                        Agende sua consulta
+                        <OverlayTrigger
+                            placement="right"
+                            overlay={<Tooltip>Dúvidas sobre a consulta? Consulte nosso FAQ!</Tooltip>}
+                        >
+                            <span className="ms-2" style={{ cursor: "pointer" }}>
+                                <FaQuestionCircle 
+                                    style={{ color: "#ed4fa5", fontSize: "1.5rem" }} 
+                                    onClick={() => window.location.href = "#faq"}
+                                />
+                            </span>
+                        </OverlayTrigger>
+                    </Modal.Title>
                 </Modal.Header>
                 <Form onSubmit={handleSubmit}>
                     <Modal.Body>
@@ -70,6 +84,7 @@ const ModalConsulta = ({ show, handleClose }) => {
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="example@email.com"
                                     autoComplete="off"
+                                    required
                                 />
                             </Form.Group>
                         </Row>
@@ -83,6 +98,7 @@ const ModalConsulta = ({ show, handleClose }) => {
                                     onChange={(e) => setTelefone(e.target.value)}
                                     placeholder="(83) 99999-9999"
                                     autoComplete="off"
+                                    required
                                 />
                             </Form.Group>
                         </Row>
@@ -95,6 +111,7 @@ const ModalConsulta = ({ show, handleClose }) => {
                                 onChange={(e) => setEndereco(e.target.value)}
                                 placeholder="Digite seu endereço"
                                 autoComplete="off"
+                                required
                             />
                         </Form.Group>
 
@@ -107,6 +124,7 @@ const ModalConsulta = ({ show, handleClose }) => {
                                     onChange={(e) => setCidade(e.target.value)}
                                     placeholder="Digite sua cidade"
                                     autoComplete="off"
+                                    required
                                 />
                             </Form.Group>
 
@@ -116,11 +134,38 @@ const ModalConsulta = ({ show, handleClose }) => {
                                     value={estado}
                                     onChange={(e) => setEstado(e.target.value)}
                                     autoComplete="off"
+                                    required
                                 >
-                                    <option>Selecione...</option>
-                                    <option>PB</option>
-                                    <option>PE</option>
-                                    <option>RN</option>
+                                    <option value="">Selecione...</option>
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AP">AP</option>
+                                    <option value="AM">AM</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SP">SP</option>
+                                    <option value="SE">SE</option>
+                                    <option value="TO">TO</option>
+
+
                                 </Form.Select>
                             </Form.Group>
 
@@ -133,6 +178,7 @@ const ModalConsulta = ({ show, handleClose }) => {
                                     autoComplete="off"
                                     maxLength="9"
                                     placeholder="00000-000"
+                                    required
                                 />
                             </Form.Group>
                         </Row>
@@ -144,16 +190,17 @@ const ModalConsulta = ({ show, handleClose }) => {
                                     value={plano}
                                     onChange={(e) => setPlano(e.target.value)}
                                     autoComplete="off"
+                                    required
                                 >
-                                    <option>Selecione...</option>
-                                    <option>Unimed</option>
-                                    <option>Amil</option>
-                                    <option>Bradesco Saúde</option>
-                                    <option>Hapvida</option>
-                                    <option>SulAmérica</option>
-                                    <option>Cassi</option>
-                                    <option>GEAP</option>
-                                    <option>Particular</option>
+                                    <option value="">Selecione...</option>
+                                    <option value="Unimed">Unimed</option>
+                                    <option value="Amil">Amil</option>
+                                    <option value="Bradesco Saúde">Bradesco Saúde</option>
+                                    <option value="Hapvida">Hapvida</option>
+                                    <option value="SulAmérica">SulAmérica</option>
+                                    <option value="Cassi">Cassi</option>
+                                    <option value="GEAP">GEAP</option>
+                                    <option value="Particular">Particular</option>
                                 </Form.Select>
                             </Form.Group>
                         </Row>
